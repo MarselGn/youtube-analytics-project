@@ -10,7 +10,7 @@ if __name__ == '__main__':
 
     # менять не можем
     moscowpython.channel_id = 'Новое название'
-    # AttributeError: property 'channel_id' of 'Channel' object has no setter
+    # # AttributeError: property 'channel_id' of 'Channel' object has no setter
 
     # можем получить объект для работы с API вне класса
     print(Channel.get_service())
