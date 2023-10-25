@@ -2,12 +2,12 @@ from googleapiclient.discovery import build
 import os
 import isodate
 from datetime import timedelta
-from src.channel import APIMixin
 
 
-class PlayList(APIMixin):
 
-    youtube = APIMixin.get_service()
+class PlayList:
+
+    youtube = build('youtube', 'v3', developerKey=os.getenv('API_KEY'))
 
     def __init__(self, playlist_id):
         playlist_info = self.youtube.playlists().list(id=playlist_id, part='snippet', ).execute()
