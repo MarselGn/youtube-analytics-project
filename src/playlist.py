@@ -4,9 +4,7 @@ import isodate
 from datetime import timedelta
 
 
-
 class PlayList:
-
     youtube = build('youtube', 'v3', developerKey=os.getenv('API_KEY'))
 
     def __init__(self, playlist_id):
